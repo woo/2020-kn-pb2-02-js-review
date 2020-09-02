@@ -1,6 +1,64 @@
 <script>
-	//for, forin, forof, forEach, each, filter, map
-for(var i=1; sum=0; i<=10; i++){
-	sum += i;
-}
+	// for, forin, forof, forEach, each, filter, map
+	for(var i=1, sum=0; i<=1000; i++) {
+		sum += i;
+	}
+	console.log(sum);
+
+	var users = [
+		{ name: "홍길동", age: 25, kor: 70, eng: 80 },
+		{ name: "홍길순", age: 35, kor: 60, eng: 70 },
+		{ name: "홍길만", age: 55, kor: 50, eng: 60 },
+		{ name: "홍길영", age: 52, kor: 80, eng: 85 },
+		{ name: "홍길이", age: 28, kor: 60, eng: 30 },
+		{ name: "홍길삼", age: 49, kor: 90, eng: 40 },
+		{ name: "홍길사", age: 35, kor: 90, eng: 50 },
+		{ name: "홍길오", age: 38, kor: 30, eng: 60 },
+		{ name: "홍길윤", age: 59, kor: 50, eng: 80 },
+		{ name: "홍길석", age: 22, kor: 90, eng: 90 },
+		{ name: "홍길숙", age: 34, kor: 100, eng: 85 },
+	];
+
+	for(var i=0; i<users.length; i++) {
+		// console.log(users[i]);
+	}
+
+	for(var i in users) {
+		// console.log(users[i].name);
+	}
+
+	// ES6 추가된 for~of => 아직은 쓸 수 없다.
+	for(var v of users) {
+		// console.log(v.name);
+	}
+
+	users.forEach(function(v, i){
+		// console.log(users[i].name);
+		// console.log(v.name);
+	});
+
+	// 1. 나이가 40세 이상인 회원을 찾으시오. var user40 = [...]
+	// 2. 각 객체에 변수 avg를 등록하고 국어와 영어의 평균을 넣으시오.
+	// 3. 국어와 영어의 평균이 70점 이상인 회원을 찾으시오. var user70 = [...]
+
+// 1번 풀이
+	var user40 = [];
+	for (var i in users){
+		if(users[i].age >= 40 ) user40.push(users[i]);
+	};
+	console.log(user40);
+
+	//2번 풀이
+	for(var i in users){
+		users[i].avg = ( users[i].kor + users[i].eng) / 2;
+	};
+	console.log(users);
+
+//3번 풀이
+  var user70 = [];
+	for (var i in users){
+		if (users[i].avg >= 70) user70.push(users[i]);
+	};
+
+
 </script>
