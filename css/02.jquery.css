@@ -1,0 +1,11 @@
+.list {
+	opacity: .7;
+	transition: opacity .5;
+	cursor: pointer;
+	overflow: hidden;
+}
+.list > img {
+	transition: transform .5s;
+}
+.list:hover{opacity: 1;}
+.list:hover{opacity: 1;}
