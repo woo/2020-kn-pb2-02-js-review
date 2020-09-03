@@ -12,10 +12,10 @@ function onFinder(){
 	selectedNumbers = selectedNumbers.sort(function( a, b){return a - b;});
 	for(var i in selectedNumbers){
 		if(selectedNumbers[i] < 11) className = 'yellow';
-		else if(selectedNumbers[i] >= 11 && selectedNumbers[i] < 21 className = 'cyan');
-		else if(selectedNumbers[i] >= 21 && selectedNumbers[i] < 31 className = 'red');
-		else if(selectedNumbers[i] >= 31 && selectedNumbers[i] < 41 className = 'grey');
-		else className = 'green');
+		else if(selectedNumbers[i] >= 11 && selectedNumbers[i] < 21) className = 'cyan';
+		else if(selectedNumbers[i] >= 21 && selectedNumbers[i] < 31) className = 'red';
+		else if(selectedNumbers[i] >= 31 && selectedNumbers[i] < 41)className = 'grey';
+		else className = 'green';
 		html = '<div class="lotto '+className+'">'+selectedNumbers[i]+'</div>';
 		$(".lotto-wrap").append(html);
 	}
