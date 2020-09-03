@@ -5,7 +5,10 @@
 - eq(n), index()
 - parent(), children(), find()
 - each()
+<<<<<<< HEAD
 
+=======
+>>>>>>> c16febb890d7579da0727d4ca25de450e6207d53
 ## DOM 관련
 - append(), appendTo(), prepend(), prependTo(), html(), text()
 - empty(), remove()
