@@ -96,6 +96,6 @@ function onRemove() {
 	$(".test").remove();
 }
 function onEmpty() {
-	// 대상의 안에 있는 태그를 삭제
+	// 대상의 안에 있는 태그를 삭제.
 	$(".test").empty();
 }
